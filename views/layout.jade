@@ -1,0 +1,57 @@
+doctype html
+html(ng-app='AngularApp')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/vendor.min.css')
+  body
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='#') AngularApp
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Home
+          li
+            a(href='#') About Us
+          li
+            a(href='#') Books
+          li
+            a(href='#') Contacts
+             ul.nav.navbar-nav.navbar-right
+          li
+            a(href='#')
+              span.glyphicon.glyphicon-user
+              |  Sign Up
+          li
+            a(href='#')
+              span.glyphicon.glyphicon-log-in
+              |  Login
+    block content
+
+    footer.page-footer
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Footer Content
+            p.grey-text.text-lighten-4 You can use rows and columns here to organize your footer content.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 1
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 2
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 3
+              li
+                a.grey-text.text-lighten-3(href='#!') Link 4
+      .footer-copyright
+        .container
+          | © 2016 Copyright AngularApp
+          a.grey-text.text-lighten-4.right(href='#!') More Links
+          
+    script(src='/javascripts/vendor.min.js')
+    script(src='/javascripts/jsonBooks.js')
+    script(src='/javascripts/app.js')
+    script(src='/javascripts/controllers.js')

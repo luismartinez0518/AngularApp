@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  //h1= title
+  //p Welcome to #{title}
+  br
+  .row
+    .col-md-2
+    div.col-md-8(ng-controller='BooksController', ng-cloak)
+      div.well.well-lg(ng-repeat="book in books", ng-hide="book.agotado")
+        h1 {{ book.name }}
+        h3 {{ book.autor }} - {{ book.price }} USD 
+        p {{ book.descripcion }}
+        button.btn.btn-primary(type="button", ng-if="book.canPurchase") Comprar
+        hr      
+    .col-md-2
+
+  hr
+  //br
+  //br
+  //p {{ msg }}
+  //br
+  //input(type='text', ng-model='msg')
+  //button.btn-primary#btn(type="button", ng-click='msg="ola"') submit
